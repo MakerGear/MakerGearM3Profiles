@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
-<profile name="MakerGear M3 ID Duplication Mode" version="2017-08-28 14:38:35" app="S3D-Software 4.0.0">
+<profile name="MakerGear M3 ID Duplication Mode" version="2017-08-28 15:49:08" app="S3D-Software 4.0.0">
   <baseProfile></baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Medium</printQuality>
-  <printExtruders>Right Extruder Only T1</printExtruders>
+  <printExtruders>Duplication Mode</printExtruders>
   <extruder name="Left Extruder (T0)">
     <toolheadNumber>0</toolheadNumber>
     <diameter>0.35</diameter>
@@ -36,7 +36,7 @@
     <useWipe>0</useWipe>
     <wipeDistance>5</wipeDistance>
   </extruder>
-  <primaryExtruder>1</primaryExtruder>
+  <primaryExtruder>0</primaryExtruder>
   <layerHeight>0.2</layerHeight>
   <topSolidLayers>4</topSolidLayers>
   <bottomSolidLayers>3</bottomSolidLayers>
@@ -50,44 +50,44 @@
   <firstLayerHeightPercentage>70</firstLayerHeightPercentage>
   <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
   <firstLayerUnderspeed>0.5</firstLayerUnderspeed>
-  <useRaft>0</useRaft>
-  <raftExtruder>1</raftExtruder>
+  <useRaft>1</useRaft>
+  <raftExtruder>0</raftExtruder>
   <raftTopLayers>3</raftTopLayers>
   <raftBaseLayers>2</raftBaseLayers>
   <raftOffset>3</raftOffset>
   <raftSeparationDistance>0.16</raftSeparationDistance>
   <raftTopInfill>87</raftTopInfill>
   <aboveRaftSpeedMultiplier>0.3</aboveRaftSpeedMultiplier>
-  <useSkirt>1</useSkirt>
-  <skirtExtruder>1</skirtExtruder>
+  <useSkirt>0</useSkirt>
+  <skirtExtruder>0</skirtExtruder>
   <skirtLayers>2</skirtLayers>
-  <skirtOutlines>5</skirtOutlines>
-  <skirtOffset>0</skirtOffset>
+  <skirtOutlines>3</skirtOutlines>
+  <skirtOffset>40</skirtOffset>
   <usePrimePillar>0</usePrimePillar>
-  <primePillarExtruder>999</primePillarExtruder>
+  <primePillarExtruder>0</primePillarExtruder>
   <primePillarWidth>16</primePillarWidth>
   <primePillarLocation>0</primePillarLocation>
   <primePillarSpeedMultiplier>0.7</primePillarSpeedMultiplier>
   <useOozeShield>0</useOozeShield>
-  <oozeShieldExtruder>999</oozeShieldExtruder>
+  <oozeShieldExtruder>0</oozeShieldExtruder>
   <oozeShieldOffset>3</oozeShieldOffset>
   <oozeShieldOutlines>2</oozeShieldOutlines>
   <oozeShieldSidewallShape>1</oozeShieldSidewallShape>
   <oozeShieldSidewallAngle>30</oozeShieldSidewallAngle>
   <oozeShieldSpeedMultiplier>1</oozeShieldSpeedMultiplier>
-  <infillExtruder>1</infillExtruder>
-  <internalInfillPattern>Grid</internalInfillPattern>
+  <infillExtruder>0</infillExtruder>
+  <internalInfillPattern>Triangular</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
   <infillPercentage>25</infillPercentage>
   <outlineOverlapPercentage>15</outlineOverlapPercentage>
   <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
   <minInfillLength>5</minInfillLength>
   <infillLayerInterval>1</infillLayerInterval>
-  <internalInfillAngles>45,-45</internalInfillAngles>
+  <internalInfillAngles>0,60,-60</internalInfillAngles>
   <overlapInternalInfillAngles>1</overlapInternalInfillAngles>
   <externalInfillAngles>45,-45</externalInfillAngles>
   <generateSupport>1</generateSupport>
-  <supportExtruder>1</supportExtruder>
+  <supportExtruder>0</supportExtruder>
   <supportInfillPercentage>30</supportInfillPercentage>
   <supportExtraInflation>0.5</supportExtraInflation>
   <supportBaseLayers>1</supportBaseLayers>
@@ -108,7 +108,7 @@
     <relayBetweenLayers>0</relayBetweenLayers>
     <relayBetweenLoops>0</relayBetweenLoops>
     <stabilizeAtStartup>0</stabilizeAtStartup>
-    <setpoint layer="1" temperature="200"/>
+    <setpoint layer="1" temperature="215"/>
   </temperatureController>
   <temperatureController name="Right Extruder (T1)">
     <temperatureNumber>1</temperatureNumber>
@@ -116,7 +116,7 @@
     <relayBetweenLayers>0</relayBetweenLayers>
     <relayBetweenLoops>0</relayBetweenLoops>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="200"/>
+    <setpoint layer="1" temperature="215"/>
   </temperatureController>
   <temperatureController name="Heated Bed">
     <temperatureNumber>2</temperatureNumber>
@@ -151,7 +151,7 @@
   <gcodeZoffset>0</gcodeZoffset>
   <overrideMachineDefinition>1</overrideMachineDefinition>
   <machineTypeOverride>0</machineTypeOverride>
-  <strokeXoverride>203</strokeXoverride>
+  <strokeXoverride>100</strokeXoverride>
   <strokeYoverride>254</strokeYoverride>
   <strokeZoverride>205</strokeZoverride>
   <originOffsetXoverride>0</originOffsetXoverride>
@@ -170,11 +170,11 @@
   <baudRateOverride>115200</baudRateOverride>
   <overridePrinterModels>1</overridePrinterModels>
   <printerModelsOverride>MakerGear_M3.stl</printerModelsOverride>
-    <startingGcode>;M3 ID duplication mode startup script,T0,G28 ; home all axes,M605 S2 R0 X100 ; set X to duplication mode 0 temperature difference 100 X difference,G28 X  ; rehome X,G1 X20 F1000 ;move to start x position,G1 Y-5 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 Y5 Z0.1 F1000; scrape off any ooze,G1 Z0.30 F1000; lift,G1 X80 E9.25; lift F1000; deposit extrusion line,G1 Y6  E9.45 F1000 ; move  and extrude y,G1 X30 E17.05; lift F1000; deposit extrusion line,G1 X20 Z0.05 F1000 ; wipe off tail,G1 Z10 Y20 ; lift to avoid clips,G92 E0; zero extruder,; ok now you can start</startingGcode>
+  <startingGcode>;M3 ID duplication mode startup script,T0,G28 ; home all axes,M605 S2 R0 X100 ; set X to duplication mode 0 temperature difference 100 X difference,G28 X  ; rehome X,G1 X20 F1000 ;move to start x position,G1 Y-5 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 Y5 Z0.1 F1000; scrape off any ooze,G1 Z0.30 F1000; lift,G1 X80 E9.25; lift F1000; deposit extrusion line,G1 Y6  E9.45 F1000 ; move  and extrude y,G1 X30 E17.05; lift F1000; deposit extrusion line,G1 X20 Z0.05 F1000 ; wipe off tail,G1 Z10 Y20 ; lift to avoid clips,G92 E0; zero extruder,; ok now you can start</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
   <toolChangeGcode></toolChangeGcode>
-  <endingGcode>M104 S0 ; turn off extruder,M104 S0 T0,M104 S0 T0,M140 S0; turn off bed,G1 Z200 Y0 F10000,M605 S0 ;x carriage mode to independent control,G28 X ;home x axes,M106 S0,M84 ; disable motors,</endingGcode>
+  <endingGcode>M104 S0 ; turn off extruder,M104 S0 T0,M104 S0 T1,M140 S0; turn off bed,G1 Z200 Y0 F10000,M605 S0 ;x carriage mode to independent control,G28 X ;home x axes,M106 S0,M84 ; disable motors,</endingGcode>
   <exportFileFormat>gcode</exportFileFormat>
   <celebration>0</celebration>
   <celebrationSong>Star Wars</celebrationSong>
@@ -223,7 +223,7 @@
   <singleExtrusionEndpointExtension>0.2</singleExtrusionEndpointExtension>
   <horizontalSizeCompensation>0</horizontalSizeCompensation>
   <autoConfigureMaterial name="PLA">
-    <globalExtruderTemperature>200</globalExtruderTemperature>
+    <globalExtruderTemperature>215</globalExtruderTemperature>
     <globalBedTemperature>65</globalBedTemperature>
     <globalExtrusionMultiplier>0.95</globalExtrusionMultiplier>
     <fanSpeed>
@@ -279,7 +279,6 @@
     <infillPercentage>35</infillPercentage>
     <supportInfillPercentage>40</supportInfillPercentage>
   </autoConfigureQuality>
-
   <autoConfigureExtruders name="Duplication Mode" allowedToolheads="2">
     <primaryExtruder>0</primaryExtruder>
     <raftExtruder>0</raftExtruder>
@@ -290,7 +289,7 @@
     <usePrimePillar>0</usePrimePillar>
     <useOozeShield>0</useOozeShield>
     <toggleTemperatureController name="Right Extruder (T1)" status="on" stabilize="on"/>
-    <toggleTemperatureController name="Left Extruder (T0)" status="on" stabilize="on"/>
-    <startingGcode>;M3 ID duplication mode startup script,T0,G28 ; home all axes,M605 S2 R0 X100 ; set X to duplication mode 0 temperature difference 100 X difference,G28 X	; rehome X,G1 X20 F1000 ;move to start x position,G1 Y-5 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 Y5 Z0.1 F1000; scrape off any ooze,G1 Z0.30 F1000; lift,G1 X80 E9.25; lift F1000; deposit extrusion line,G1 Y6  E9.45 F1000 ; move  and extrude y,G1 X30 E17.05; lift F1000; deposit extrusion line,G1 X20 Z0.05 F1000 ; wipe off tail,G1 Z10 Y20 ; lift to avoid clips,G92 E0; zero extruder,; ok now you can start</startingGcode>
+    <toggleTemperatureController name="Left Extruder (T0)" status="on" stabilize="off"/>
+    <startingGcode>;M3 ID duplication mode startup script,T0,G28 ; home all axes,M605 S2 R0 X100 ; set X to duplication mode 0 temperature difference 100 X difference,G28 X  ; rehome X,G1 X20 F1000 ;move to start x position,G1 Y-5 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 Y5 Z0.1 F1000; scrape off any ooze,G1 Z0.30 F1000; lift,G1 X80 E9.25; lift F1000; deposit extrusion line,G1 Y6  E9.45 F1000 ; move  and extrude y,G1 X30 E17.05; lift F1000; deposit extrusion line,G1 X20 Z0.05 F1000 ; wipe off tail,G1 Z10 Y20 ; lift to avoid clips,G92 E0; zero extruder,; ok now you can start</startingGcode>
   </autoConfigureExtruders>
 </profile>
