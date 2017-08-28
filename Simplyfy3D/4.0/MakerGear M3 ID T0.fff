@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="MakerGear M3 ID Left / T0" version="2017-08-27 10:02:39" app="S3D-Software 4.0.0">
+<profile name="MakerGear M3 ID Left / T0" version="2017-08-26 19:24:49" app="S3D-Software 4.0.0">
   <baseProfile></baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Medium</printQuality>
@@ -173,8 +173,8 @@
   <startingGcode>;M3 ID T0/T1 starting script T1 purges first T0 purges second,T0,M605 S0,G28 ; home all axes,T1 ; Switch to left extruder,G28 X ; home x axes,G1 X215 Y40 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z5 ; lift,G1 X40 Y6 F10000; move to unused front edge,G1 Z0.30 F1000,G1 X160 E20 F1000,G1 X170 Z0.05 F1000 ; wipe off tail,G1 Z7,G1 X210 Y40 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z5 ; lift,G1 X170 Y6 F10000; move to unused front edge,G1 Z0.60 F1000,G1 X40 E20 F1000,G1 X30 Z0.05 F1000 ; wipe off tail,G1 Z7	; lift to avoid clips,G28 X ; home x axes,G92 E0,,; ok now you can start,</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
-  <toolChangeGcode>;t0 toolchange,T1,G1 X250 F18000,T0,G1 X-21 F18000,</toolChangeGcode>
-  <endingGcode>M104 S0 ; turn off extruder,M140 S0 ; turn off bed,G1 Z200 Y0 F10000,M605 S0	;x carriage mode to independent control,G28 X	;home x axes,M106 S0,M84 ; disable motors,</endingGcode>
+  <toolChangeGcode>;t0 toolchange,T0, G1 X-25 F18000; maker sure t0 is parked, T1,G1 X250 F18000 ; park T1,;s3d adds in T0 toolchange</toolChangeGcode>
+  <endingGcode>M104 S0 ; turn off extruder,M104 S0 T0,M104 S0 T0,M140 S0; turn off bed,G1 Z200 Y0 F10000,M605 S0 ;x carriage mode to independent control,G28 X ;home x axes,M106 S0,M84 ; disable motors,</endingGcode>
   <exportFileFormat>gcode</exportFileFormat>
   <celebration>0</celebration>
   <celebrationSong>Star Wars</celebrationSong>
@@ -335,7 +335,7 @@
     <useOozeShield>0</useOozeShield>
     <toggleTemperatureController name="Right Extruder (T1)" status="on" stabilize="on"/>
     <toggleTemperatureController name="Left Extruder (T0)" status="on" stabilize="on"/>
-    <startingGcode>;M3 ID T0/T1 starting script T1 purges first T0 purges second,T0,M605 S0,G28 ; home all axes,T1 ; Switch to left extruder,G28 X ; home x axes,G1 X215 Y40 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z5 ; lift,G1 X40 Y6 F10000; move to unused front edge,G1 Z0.30 F1000,G1 X160 E20 F1000,G1 X170 Z0.05 F1000 ; wipe off tail,G1 Z7,G1 X210 Y40 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z5 ; lift,G1 X170 Y6 F10000; move to unused front edge,G1 Z0.60 F1000,G1 X40 E20 F1000,G1 X30 Z0.05 F1000 ; wipe off tail,G1 Z7	; lift to avoid clips,G28 X ; home x axes,G92 E0,,; ok now you can start,</startingGcode>
+    <startingGcode>;M3 ID T0/T1 starting script T1 purges first T0 purges second,T0,M605 S0,G28 ; home all axes,T1 ; Switch to left extruder,G28 X ; home x axes,G1 X215 Y40 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z5 ; lift,G1 X40 Y6 F10000; move to unused front edge,G1 Z0.30 F1000,G1 X160 E20 F1000,G1 X170 Z0.05 F1000 ; wipe off tail,G1 Z7, G1 X250; move T1 home,T0,G1 X210 Y40 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z5 ; lift,G1 X170 Y6 F10000; move to unused front edge,G1 Z0.60 F1000,G1 X40 E20 F1000,G1 X30 Z0.05 F1000 ; wipe off tail,G1 Z7	; lift to avoid clips,G28 X ; home x axes,G92 E0,,; ok now you can start,</startingGcode>
   </autoConfigureExtruders>
   <autoConfigureExtruders name="Duplication Mode" allowedToolheads="2">
     <primaryExtruder>0</primaryExtruder>
