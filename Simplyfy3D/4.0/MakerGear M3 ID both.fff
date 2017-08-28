@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="MakerGear M3 ID Right / T1" version="2017-08-26 19:26:31" app="S3D-Software 4.0.0">
+<profile name="MakerGear M3 ID" version="2017-08-26 19:24:49" app="S3D-Software 4.0.0">
   <baseProfile></baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Medium</printQuality>
@@ -36,7 +36,7 @@
     <useWipe>0</useWipe>
     <wipeDistance>5</wipeDistance>
   </extruder>
-  <primaryExtruder>1</primaryExtruder>
+  <primaryExtruder>0</primaryExtruder>
   <layerHeight>0.2</layerHeight>
   <topSolidLayers>4</topSolidLayers>
   <bottomSolidLayers>4</bottomSolidLayers>
@@ -51,7 +51,7 @@
   <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
   <firstLayerUnderspeed>0.5</firstLayerUnderspeed>
   <useRaft>0</useRaft>
-  <raftExtruder>1</raftExtruder>
+  <raftExtruder>0</raftExtruder>
   <raftTopLayers>3</raftTopLayers>
   <raftBaseLayers>2</raftBaseLayers>
   <raftOffset>3</raftOffset>
@@ -59,7 +59,7 @@
   <raftTopInfill>89</raftTopInfill>
   <aboveRaftSpeedMultiplier>0.3</aboveRaftSpeedMultiplier>
   <useSkirt>1</useSkirt>
-  <skirtExtruder>1</skirtExtruder>
+  <skirtExtruder>0</skirtExtruder>
   <skirtLayers>2</skirtLayers>
   <skirtOutlines>5</skirtOutlines>
   <skirtOffset>0</skirtOffset>
@@ -75,7 +75,7 @@
   <oozeShieldSidewallShape>1</oozeShieldSidewallShape>
   <oozeShieldSidewallAngle>30</oozeShieldSidewallAngle>
   <oozeShieldSpeedMultiplier>1</oozeShieldSpeedMultiplier>
-  <infillExtruder>1</infillExtruder>
+  <infillExtruder>0</infillExtruder>
   <internalInfillPattern>Grid</internalInfillPattern>
   <externalInfillPattern>Rectilinear</externalInfillPattern>
   <infillPercentage>18</infillPercentage>
@@ -87,11 +87,11 @@
   <overlapInternalInfillAngles>1</overlapInternalInfillAngles>
   <externalInfillAngles>45,-45</externalInfillAngles>
   <generateSupport>1</generateSupport>
-  <supportExtruder>1</supportExtruder>
+  <supportExtruder>0</supportExtruder>
   <supportInfillPercentage>30</supportInfillPercentage>
   <supportExtraInflation>0.25</supportExtraInflation>
   <supportBaseLayers>1</supportBaseLayers>
-  <denseSupportExtruder>1</denseSupportExtruder>
+  <denseSupportExtruder>0</denseSupportExtruder>
   <denseSupportLayers>8</denseSupportLayers>
   <denseSupportInfillPercentage>30</denseSupportInfillPercentage>
   <supportLayerInterval>1</supportLayerInterval>
@@ -170,11 +170,11 @@
   <baudRateOverride>115200</baudRateOverride>
   <overridePrinterModels>1</overridePrinterModels>
   <printerModelsOverride>MakerGear_M3.stl</printerModelsOverride>
-  <startingGcode>;Both extruders T0/T1  script T0 purges first T1 purges second,T0,M605 S0,G28 ; home all axes,G1 X210 Y40 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z5 ; lift,G1 X170 Y6 F10000; move to unused front edge,G1 Z0.30 F1000,G1 X40 E20 F1000,G1 X30 Z0.05 F1000 ; wipe off tail,G1 Z7,T1 ; Switch to left extruder,G28 X ; home x axes,G1 X215 Y40 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z5 ; lift,G1 X40 Y6 F10000; move to unused front edge,G1 Z0.60 F1000,G1 X160 E20 F1000,G1 X170 Z0.05 F1000 ; wipe off tail,G1 Z7,G28 X ; home x axes,G92 E0,,; ok now you can start</startingGcode>
+  <startingGcode>;M3 ID T0/T1 starting script T1 purges first T0 purges second,T0,M605 S0,G28 ; home all axes,T1 ; Switch to left extruder,G28 X ; home x axes,G1 X215 Y40 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z5 ; lift,G1 X40 Y6 F10000; move to unused front edge,G1 Z0.30 F1000,G1 X160 E20 F1000,G1 X170 Z0.05 F1000 ; wipe off tail,G1 Z7,G1 X210 Y40 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z5 ; lift,G1 X170 Y6 F10000; move to unused front edge,G1 Z0.60 F1000,G1 X40 E20 F1000,G1 X30 Z0.05 F1000 ; wipe off tail,G1 Z7	; lift to avoid clips,G28 X ; home x axes,G92 E0,,; ok now you can start,</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
-  <toolChangeGcode>;Change to T1,T1, G1 X250 F18000; make sure t1 is parked, T0,G1 X-25 F18000	; park T0,;s3d adds in T1 command</toolChangeGcode>
-  <endingGcode>M104 S0 ; turn off extruder,M104 S0 T0 ; turn off extruder,M104 S0 T1; turn off extruder,M140 S0 ; turn off bed,G1 Z200 Y0 X215 F10000,M106 S0,M84 ; disable motors,</endingGcode>
+  <toolChangeGcode>;t0 toolchange,T0, G1 X-25 F18000; maker sure t0 is parked, T1,G1 X250 F18000 ; park T1,;s3d adds in T0 toolchange</toolChangeGcode>
+  <endingGcode>M104 S0 ; turn off extruder,M104 S0 T0,M104 S0 T0,M140 S0; turn off bed,G1 Z200 Y0 F10000,M605 S0 ;x carriage mode to independent control,G28 X ;home x axes,M106 S0,M84 ; disable motors,</endingGcode>
   <exportFileFormat>gcode</exportFileFormat>
   <celebration>0</celebration>
   <celebrationSong>Star Wars</celebrationSong>
@@ -207,13 +207,13 @@
   <retractBetweenLayers>1</retractBetweenLayers>
   <useRetractionMinTravel>0</useRetractionMinTravel>
   <retractionMinTravel>3</retractionMinTravel>
-  <retractWhileWiping>0</retractWhileWiping>
+  <retractWhileWiping>1</retractWhileWiping>
   <onlyWipeOutlines>1</onlyWipeOutlines>
   <avoidCrossingOutline>1</avoidCrossingOutline>
   <maxMovementDetourFactor>10</maxMovementDetourFactor>
-  <toolChangeRetractionDistance>12</toolChangeRetractionDistance>
+  <toolChangeRetractionDistance>2</toolChangeRetractionDistance>
   <toolChangeExtraRestartDistance>-0.5</toolChangeExtraRestartDistance>
-  <toolChangeRetractionSpeed>600</toolChangeRetractionSpeed>
+  <toolChangeRetractionSpeed>10000</toolChangeRetractionSpeed>
   <externalThinWallType>0</externalThinWallType>
   <internalThinWallType>2</internalThinWallType>
   <thinWallAllowedOverlapPercentage>25</thinWallAllowedOverlapPercentage>
@@ -279,6 +279,19 @@
     <infillPercentage>35</infillPercentage>
     <supportInfillPercentage>40</supportInfillPercentage>
   </autoConfigureQuality>
+  <autoConfigureExtruders name="Left Extruder Only T0" allowedToolheads="1">
+    <primaryExtruder>1</primaryExtruder>
+    <raftExtruder>1</raftExtruder>
+    <skirtExtruder>1</skirtExtruder>
+    <infillExtruder>1</infillExtruder>
+    <supportExtruder>1</supportExtruder>
+    <useSkirt>1</useSkirt>
+    <usePrimePillar>0</usePrimePillar>
+    <useOozeShield>0</useOozeShield>
+    <toggleTemperatureController name="Right Extruder (T1)" status="off" stabilize="off"/>
+    <startingGcode>;M3 ID Left Extruder Only Startup Script,M605 S0; set to full independ control on x axes,T0 ; Switch to left extruder,G28 ; home all axes,G1 X210 Y40 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z5 ; lift,G1 X170 Y4 F10000; move to unused front edge,G1 Z0.30 F1000,G1 X40 E20 F1000,G1 X30 Z0.05 F1000 ; wipe off tail,G1 Z1,G92 E0,; ok now you can start,</startingGcode>
+  </autoConfigureExtruders>
+
   <autoConfigureExtruders name="Right Extruder Only T1" allowedToolheads="1">
     <primaryExtruder>1</primaryExtruder>
     <raftExtruder>1</raftExtruder>
@@ -292,17 +305,46 @@
     <toggleTemperatureController name="Left Extruder (T0)" status="on" stabilize="off"/>
     <startingGcode>;M3 ID Right Extruder Only Startup Script,M605 S0; set to full independ control on x axes,T1 ; Switch to left extruder,G28 ; home all axes,G1 X215 Y40 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z5 ; lift,G1 X40 Y4 F10000; move to unused front edge,G1 Z0.30 F1000,G1 X160 E20 F1000,G1 X170 Z0.05 F1000 ; wipe off tail,G1 Z1,G92 E0,; ok now you can start</startingGcode>
   </autoConfigureExtruders>
-  <autoConfigureExtruders name="Both Extruders" allowedToolheads="2">
+
+  <autoConfigureExtruders name="Both Extruders - T0" allowedToolheads="2">
+    <primaryExtruder>0</primaryExtruder>
+    <raftExtruder>0</raftExtruder>
+    <skirtExtruder>0</skirtExtruder>
+    <infillExtruder>0</infillExtruder>
+    <supportExtruder>0</supportExtruder>
+    <useSkirt>1</useSkirt>
+    <usePrimePillar>1</usePrimePillar>
+    <useOozeShield>1</useOozeShield>
+    <toggleTemperatureController name="Right Extruder (T1)" status="on" stabilize="on"/>
+    <toggleTemperatureController name="Left Extruder (T0)" status="on" stabilize="on"/>
+    <startingGcode>;M3 ID T0/T1 starting script T1 purges first T0 purges second,T0,M605 S0,G28 ; home all axes,T1 ; Switch to left extruder,G28 X ; home x axes,G1 X215 Y40 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z5 ; lift,G1 X40 Y6 F10000; move to unused front edge,G1 Z0.30 F1000,G1 X160 E20 F1000,G1 X170 Z0.05 F1000 ; wipe off tail,G1 Z7, G1 X250; move T1 home,T0,G1 X210 Y40 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z5 ; lift,G1 X170 Y6 F10000; move to unused front edge,G1 Z0.60 F1000,G1 X40 E20 F1000,G1 X30 Z0.05 F1000 ; wipe off tail,G1 Z7	; lift to avoid clips,G28 X ; home x axes,G92 E0,,; ok now you can start,</startingGcode>
+  </autoConfigureExtruders>
+
+  <autoConfigureExtruders name="Both Extruders - T1" allowedToolheads="2">
     <primaryExtruder>1</primaryExtruder>
     <raftExtruder>1</raftExtruder>
     <skirtExtruder>1</skirtExtruder>
     <infillExtruder>1</infillExtruder>
     <supportExtruder>1</supportExtruder>
-    <useSkirt>0</useSkirt>
+    <useSkirt>1</useSkirt>
     <usePrimePillar>1</usePrimePillar>
-    <useOozeShield>0</useOozeShield>
+    <useOozeShield>1</useOozeShield>
     <toggleTemperatureController name="Right Extruder (T1)" status="on" stabilize="on"/>
     <toggleTemperatureController name="Left Extruder (T0)" status="on" stabilize="on"/>
     <startingGcode>;Both extruders T0/T1  script T0 purges first T1 purges second,T0,M605 S0,G28 ; home all axes,G1 X210 Y40 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z5 ; lift,G1 X170 Y6 F10000; move to unused front edge,G1 Z0.30 F1000,G1 X40 E20 F1000,G1 X30 Z0.05 F1000 ; wipe off tail,G1 Z7,G1 X-25; move T0 home,T1 ; Switch to left extruder,G1 X215 Y40 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z5 ; lift,G1 X40 Y6 F10000; move to unused front edge,G1 Z0.60 F1000,G1 X160 E20 F1000,G1 X170 Z0.05 F1000 ; wipe off tail,G1 Z7,G28 X ; home x axes,G92 E0,,; ok now you can start</startingGcode>
+  </autoConfigureExtruders>
+
+  <autoConfigureExtruders name="Duplication Mode" allowedToolheads="2">
+    <primaryExtruder>0</primaryExtruder>
+    <raftExtruder>0</raftExtruder>
+    <skirtExtruder>0</skirtExtruder>
+    <infillExtruder>0</infillExtruder>
+    <supportExtruder>0</supportExtruder>
+    <useSkirt>0</useSkirt>
+    <usePrimePillar>0</usePrimePillar>
+    <useOozeShield>0</useOozeShield>
+    <toggleTemperatureController name="Right Extruder (T1)" status="on" stabilize="on"/>
+    <toggleTemperatureController name="Left Extruder (T0)" status="on" stabilize="on"/>
+    <startingGcode>;M3 ID duplication mode startup script,T0,G28 ; home all axes,M605 S2 R0 X100 ; set X to duplication mode 0 temperature difference 100 X difference,G28 X	; rehome X,G1 X20 F1000 ;move to start x position,G1 Y-5 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 Y5 Z0.1 F1000; scrape off any ooze,G1 Z0.30 F1000; lift,G1 X80 E9.25; lift F1000; deposit extrusion line,G1 Y6  E9.45 F1000 ; move  and extrude y,G1 X30 E17.05; lift F1000; deposit extrusion line,G1 X20 Z0.05 F1000 ; wipe off tail,G1 Z10 ; lift to avoid clips,G92 E0; zero extruder,; ok now you can start</startingGcode>
   </autoConfigureExtruders>
 </profile>
