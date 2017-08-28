@@ -18,7 +18,7 @@
     <useCoasting>1</useCoasting>
     <coastingDistance>0.03</coastingDistance>
     <useWipe>0</useWipe>
-    <wipeDistance>5</wipeDistance>
+    <wipeDistance>.25</wipeDistance>
   </extruder>
   <extruder name="Right Extruder (T1)">
     <toolheadNumber>1</toolheadNumber>
@@ -38,13 +38,13 @@
   </extruder>
   <primaryExtruder>0</primaryExtruder>
   <layerHeight>0.2</layerHeight>
-  <topSolidLayers>3</topSolidLayers>
-  <bottomSolidLayers>3</bottomSolidLayers>
-  <perimeterOutlines>2</perimeterOutlines>
+  <topSolidLayers>4</topSolidLayers>
+  <bottomSolidLayers>4</bottomSolidLayers>
+  <perimeterOutlines>3</perimeterOutlines>
   <printPerimetersInsideOut>1</printPerimetersInsideOut>
-  <startPointOption>1</startPointOption>
-  <startPointOriginX>5000</startPointOriginX>
-  <startPointOriginY>0</startPointOriginY>
+  <startPointOption>3</startPointOption>
+  <startPointOriginX>100</startPointOriginX>
+  <startPointOriginY>250</startPointOriginY>
   <sequentialIslands>0</sequentialIslands>
   <spiralVaseMode>0</spiralVaseMode>
   <firstLayerHeightPercentage>70</firstLayerHeightPercentage>
@@ -55,8 +55,8 @@
   <raftTopLayers>3</raftTopLayers>
   <raftBaseLayers>2</raftBaseLayers>
   <raftOffset>3</raftOffset>
-  <raftSeparationDistance>0.14</raftSeparationDistance>
-  <raftTopInfill>85</raftTopInfill>
+  <raftSeparationDistance>0.16</raftSeparationDistance>
+  <raftTopInfill>89</raftTopInfill>
   <aboveRaftSpeedMultiplier>0.3</aboveRaftSpeedMultiplier>
   <useSkirt>0</useSkirt>
   <skirtExtruder>0</skirtExtruder>
@@ -89,17 +89,17 @@
   <generateSupport>1</generateSupport>
   <supportExtruder>0</supportExtruder>
   <supportInfillPercentage>30</supportInfillPercentage>
-  <supportExtraInflation>0.5</supportExtraInflation>
-  <supportBaseLayers>0</supportBaseLayers>
+  <supportExtraInflation>0.25</supportExtraInflation>
+  <supportBaseLayers>1</supportBaseLayers>
   <denseSupportExtruder>0</denseSupportExtruder>
-  <denseSupportLayers>0</denseSupportLayers>
-  <denseSupportInfillPercentage>70</denseSupportInfillPercentage>
+  <denseSupportLayers>8</denseSupportLayers>
+  <denseSupportInfillPercentage>30</denseSupportInfillPercentage>
   <supportLayerInterval>1</supportLayerInterval>
-  <supportHorizontalPartOffset>0.25</supportHorizontalPartOffset>
+  <supportHorizontalPartOffset>0.35</supportHorizontalPartOffset>
   <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
-  <supportLowerSeparationLayers>2</supportLowerSeparationLayers>
+  <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
   <supportType>0</supportType>
-  <supportGridSpacing>4</supportGridSpacing>
+  <supportGridSpacing>1</supportGridSpacing>
   <maxOverhangAngle>60</maxOverhangAngle>
   <supportAngles>90</supportAngles>
   <temperatureController name="Left Extruder (T0)">
@@ -132,8 +132,8 @@
   </fanSpeed>
   <blipFanToFullPower>0</blipFanToFullPower>
   <adjustSpeedForCooling>1</adjustSpeedForCooling>
-  <minSpeedLayerTime>15</minSpeedLayerTime>
-  <minCoolingSpeedSlowdown>10</minCoolingSpeedSlowdown>
+  <minSpeedLayerTime>5</minSpeedLayerTime>
+  <minCoolingSpeedSlowdown>40</minCoolingSpeedSlowdown>
   <increaseFanForCooling>0</increaseFanForCooling>
   <minFanLayerTime>45</minFanLayerTime>
   <maxCoolingFanSpeed>100</maxCoolingFanSpeed>
@@ -181,19 +181,19 @@
   <postProcessing></postProcessing>
   <defaultSpeed>3500</defaultSpeed>
   <outlineUnderspeed>0.6</outlineUnderspeed>
-  <solidInfillUnderspeed>0.8</solidInfillUnderspeed>
+  <solidInfillUnderspeed>1</solidInfillUnderspeed>
   <supportUnderspeed>0.8</supportUnderspeed>
   <rapidXYspeed>18000</rapidXYspeed>
   <rapidZspeed>1200</rapidZspeed>
-  <minBridgingArea>50</minBridgingArea>
-  <bridgingExtraInflation>0</bridgingExtraInflation>
-  <bridgingExtrusionMultiplier>1</bridgingExtrusionMultiplier>
-  <bridgingSpeedMultiplier>1</bridgingSpeedMultiplier>
+  <minBridgingArea>5</minBridgingArea>
+  <bridgingExtraInflation>0.15</bridgingExtraInflation>
+  <bridgingExtrusionMultiplier>0.9</bridgingExtrusionMultiplier>
+  <bridgingSpeedMultiplier>0.5</bridgingSpeedMultiplier>
   <useFixedBridgingAngle>0</useFixedBridgingAngle>
   <fixedBridgingAngle>0</fixedBridgingAngle>
   <applyBridgingToPerimeters>0</applyBridgingToPerimeters>
   <filamentDiameters>1.75|1.75|1.75|1.75|1.75|1.75</filamentDiameters>
-  <filamentPricesPerKg>46|46|46|46|46|46</filamentPricesPerKg>
+  <filamentPricesPerKg>35|35|35|35|35|35</filamentPricesPerKg>
   <filamentDensities>1.25|1.25|1.25|1.25|1.25|1.25</filamentDensities>
   <useMinPrintHeight>0</useMinPrintHeight>
   <minPrintHeight>0</minPrintHeight>
@@ -203,11 +203,11 @@
   <diaphragmLayerInterval>20</diaphragmLayerInterval>
   <robustSlicing>1</robustSlicing>
   <mergeAllIntoSolid>0</mergeAllIntoSolid>
-  <onlyRetractWhenCrossingOutline>1</onlyRetractWhenCrossingOutline>
+  <onlyRetractWhenCrossingOutline>0</onlyRetractWhenCrossingOutline>
   <retractBetweenLayers>1</retractBetweenLayers>
   <useRetractionMinTravel>0</useRetractionMinTravel>
   <retractionMinTravel>3</retractionMinTravel>
-  <retractWhileWiping>0</retractWhileWiping>
+  <retractWhileWiping>1</retractWhileWiping>
   <onlyWipeOutlines>1</onlyWipeOutlines>
   <avoidCrossingOutline>1</avoidCrossingOutline>
   <maxMovementDetourFactor>10</maxMovementDetourFactor>
@@ -216,7 +216,7 @@
   <toolChangeRetractionSpeed>600</toolChangeRetractionSpeed>
   <externalThinWallType>0</externalThinWallType>
   <internalThinWallType>2</internalThinWallType>
-  <thinWallAllowedOverlapPercentage>10</thinWallAllowedOverlapPercentage>
+  <thinWallAllowedOverlapPercentage>25</thinWallAllowedOverlapPercentage>
   <singleExtrusionMinLength>1</singleExtrusionMinLength>
   <singleExtrusionMinPrintingWidthPercentage>50</singleExtrusionMinPrintingWidthPercentage>
   <singleExtrusionMaxPrintingWidthPercentage>200</singleExtrusionMaxPrintingWidthPercentage>
@@ -232,8 +232,8 @@
     </fanSpeed>
   </autoConfigureMaterial>
   <autoConfigureMaterial name="ABS">
-    <globalExtruderTemperature>255</globalExtruderTemperature>
-    <globalBedTemperature>110</globalBedTemperature>
+    <globalExtruderTemperature>265</globalExtruderTemperature>
+    <globalBedTemperature>115</globalBedTemperature>
     <globalExtrusionMultiplier>1</globalExtrusionMultiplier>
     <fanSpeed>
       <setpoint layer="1" speed="0"/>
@@ -298,18 +298,18 @@
   </autoConfigureQuality>
   <autoConfigureQuality name="Medium">
     <layerHeight>0.2</layerHeight>
-    <topSolidLayers>3</topSolidLayers>
-    <bottomSolidLayers>3</bottomSolidLayers>
+    <topSolidLayers>4</topSolidLayers>
+    <bottomSolidLayers>4</bottomSolidLayers>
     <skirtLayers>2</skirtLayers>
-    <infillPercentage>18</infillPercentage>
+    <infillPercentage>25</infillPercentage>
     <supportInfillPercentage>30</supportInfillPercentage>
   </autoConfigureQuality>
   <autoConfigureQuality name="High">
     <layerHeight>0.1</layerHeight>
-    <topSolidLayers>4</topSolidLayers>
-    <bottomSolidLayers>4</bottomSolidLayers>
+    <topSolidLayers>16</topSolidLayers>
+    <bottomSolidLayers>16</bottomSolidLayers>
     <skirtLayers>2</skirtLayers>
-    <infillPercentage>30</infillPercentage>
+    <infillPercentage>35</infillPercentage>
     <supportInfillPercentage>40</supportInfillPercentage>
   </autoConfigureQuality>
   <autoConfigureExtruders name="Left Extruder Only T0" allowedToolheads="1">
