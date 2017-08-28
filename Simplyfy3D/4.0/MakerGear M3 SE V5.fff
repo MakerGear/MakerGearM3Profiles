@@ -100,7 +100,7 @@
     <relayBetweenLayers>0</relayBetweenLayers>
     <relayBetweenLoops>0</relayBetweenLoops>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="70"/>
+    <setpoint layer="1" temperature="65"/>
   </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0"/>
