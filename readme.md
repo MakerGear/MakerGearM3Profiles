@@ -1,13 +1,29 @@
+Simplyfy 3D Users:
+We will be working on a video and article for dual workflow. We reccomend using the factory files in 	
+	Simplyfy3D- > Independent Dual -> factoryFiles
 
 
-We will be working on a video and article for dual workflow, but in the meantime here's an outline of your workflow. 
+M3ID 2 Color.factory
+	2 Color/ 2 model prints 
 
-For all scenarios, Import both T0 and T1 profiles to S3D
+M3ID Duplication.factory
+	Single model prints, once printing with each extruder simultaenously
+
+M3ID Left Only.factory
+	Left Extruder only
+
+M3ID Right Only.factory
+	Right Extruder Only
 
 
+
+
+
+If you would like to manually import the .fff profiles here are some workflows
 
 For two color prints of the same material
-
+	-File -> Import FFF Profile 
+		Pick 'MakerGear M3 ID Base.fff', located in Simplyfy3D- > Independent Dual -> MakerGear M3 ID Base.fff
 	-Import both models into S3D
 	-Align both models in your workspace.
 		Typically the easiest way to do this is to select both models and go to
@@ -17,9 +33,11 @@ For two color prints of the same material
 	-Select both models in the Models sidebar on the left
 	-You can now use the Position/Scaling/Rotation window to adjust your model
 		NOTE: All models must fit between X positions X25 and X200.
-	-Create a new Process and pick the T0 profile
+	-Create a new Process and pick the "MakerGear M3 ID" profile
+	-Select "Both Extruders T0" from the Auto-Configure Extruders Drop Down
 	-Click 'Select Models' and pick the model for T0
-	-Create a new Process and pick the T1 profile
+	-Create a new Process and pick the "MakerGear M3 ID" profile
+	-Select "Both Extruders T1" from the Auto-Configure Extruders Drop Down
 	-Click 'Select Models' and pick the model for T1
 	-Adjust any settings you need to in your processes
 	-Select both processes and click 'Prepare to print'
@@ -31,7 +49,7 @@ For two color prints of the same material
 
 
 Misc Notes
-	-The defualt profiles use both Ooze shield and a prime pillar. For faster prints you may wish to disable one or the other, 
+	-The defualt profiles use both Ooze shield and a prime pillar. For faster prints you may wish to disable one or the other.
 
 
 
