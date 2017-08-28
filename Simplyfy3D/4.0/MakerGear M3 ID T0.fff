@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="MakerGear M3 ID Left / T0" version="2017-08-25 22:45:48" app="S3D-Software 4.0.0">
+<profile name="MakerGear M3 ID Left / T0" version="2017-08-26 14:50:02" app="S3D-Software 4.0.0">
   <baseProfile></baseProfile>
   <printMaterial>PLA</printMaterial>
   <printQuality>Medium</printQuality>
@@ -9,7 +9,7 @@
     <diameter>0.35</diameter>
     <autoWidth>0</autoWidth>
     <width>0.4</width>
-    <extrusionMultiplier>1</extrusionMultiplier>
+    <extrusionMultiplier>0.95</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>2</retractionDistance>
     <extraRestartDistance>-0.03</extraRestartDistance>
@@ -25,7 +25,7 @@
     <diameter>0.35</diameter>
     <autoWidth>0</autoWidth>
     <width>0.4</width>
-    <extrusionMultiplier>1</extrusionMultiplier>
+    <extrusionMultiplier>0.95</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>2</retractionDistance>
     <extraRestartDistance>-0.03</extraRestartDistance>
@@ -58,7 +58,7 @@
   <raftSeparationDistance>0.14</raftSeparationDistance>
   <raftTopInfill>85</raftTopInfill>
   <aboveRaftSpeedMultiplier>0.3</aboveRaftSpeedMultiplier>
-  <useSkirt>1</useSkirt>
+  <useSkirt>0</useSkirt>
   <skirtExtruder>0</skirtExtruder>
   <skirtLayers>2</skirtLayers>
   <skirtOutlines>5</skirtOutlines>
@@ -67,7 +67,7 @@
   <primePillarExtruder>999</primePillarExtruder>
   <primePillarWidth>16</primePillarWidth>
   <primePillarLocation>0</primePillarLocation>
-  <primePillarSpeedMultiplier>.3</primePillarSpeedMultiplier>
+  <primePillarSpeedMultiplier>0.3</primePillarSpeedMultiplier>
   <useOozeShield>0</useOozeShield>
   <oozeShieldExtruder>999</oozeShieldExtruder>
   <oozeShieldOffset>3</oozeShieldOffset>
@@ -87,7 +87,7 @@
   <overlapInternalInfillAngles>1</overlapInternalInfillAngles>
   <externalInfillAngles>45,-45</externalInfillAngles>
   <generateSupport>1</generateSupport>
-  <supportExtruder>1</supportExtruder>
+  <supportExtruder>0</supportExtruder>
   <supportInfillPercentage>30</supportInfillPercentage>
   <supportExtraInflation>0.5</supportExtraInflation>
   <supportBaseLayers>0</supportBaseLayers>
@@ -116,7 +116,7 @@
     <relayBetweenLayers>0</relayBetweenLayers>
     <relayBetweenLoops>0</relayBetweenLoops>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="220"/>
+    <setpoint layer="1" temperature="200"/>
   </temperatureController>
   <temperatureController name="Heated Bed">
     <temperatureNumber>2</temperatureNumber>
@@ -124,7 +124,7 @@
     <relayBetweenLayers>0</relayBetweenLayers>
     <relayBetweenLoops>0</relayBetweenLoops>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="85"/>
+    <setpoint layer="1" temperature="70"/>
   </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0"/>
@@ -173,11 +173,11 @@
   <startingGcode>;T0/T1 script T1 purges first,T0,M605 S0,G28 ; home all axes,T1,G92 E0,G1 X180 Y25 Z0.1,G1 X170 Y25 Z0.6 E1,G1 X70 E25,G1 X75 Y25 Z0.3 E25.1,G92 E0,G1 Y25 Z2 E-2,G28 X,;G1 X230,T0,G92 E0 ; zero extruder,G1 X20 Y25 Z0.1 F3000,G1 X30 Y25 Z0.3 E2,G1 X150 Y25 E30,G1 X160 Y25 Z0.05 E30.1,G92 E0,G1 Y25 Z0.3,G1 X-10,</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
-  <toolChangeGcode></toolChangeGcode>
+  <toolChangeGcode>;t0 toolchange,T1,G1 X250,T0</toolChangeGcode>
   <endingGcode>M104 S0 ; turn off extruder,M140 S0 ; turn off bed,G1 Z200 Y0 F10000,M605 S0	;x carriage mode to independent control,G28 X	;home x axes,M106 S0,M84 ; disable motors,</endingGcode>
   <exportFileFormat>gcode</exportFileFormat>
   <celebration>0</celebration>
-  <celebrationSong>Random Song</celebrationSong>
+  <celebrationSong>Star Wars</celebrationSong>
   <postProcessing></postProcessing>
   <defaultSpeed>3500</defaultSpeed>
   <outlineUnderspeed>0.6</outlineUnderspeed>
@@ -223,7 +223,7 @@
   <singleExtrusionEndpointExtension>0.2</singleExtrusionEndpointExtension>
   <horizontalSizeCompensation>0</horizontalSizeCompensation>
   <autoConfigureMaterial name="PLA">
-    <globalExtruderTemperature>220</globalExtruderTemperature>
+    <globalExtruderTemperature>200</globalExtruderTemperature>
     <globalBedTemperature>70</globalBedTemperature>
     <globalExtrusionMultiplier>0.95</globalExtrusionMultiplier>
     <fanSpeed>

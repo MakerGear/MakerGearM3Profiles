@@ -9,7 +9,7 @@
     <diameter>0.35</diameter>
     <autoWidth>0</autoWidth>
     <width>0.4</width>
-    <extrusionMultiplier>1</extrusionMultiplier>
+    <extrusionMultiplier>0.95</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>2</retractionDistance>
     <extraRestartDistance>-0.03</extraRestartDistance>
@@ -25,7 +25,7 @@
     <diameter>0.35</diameter>
     <autoWidth>0</autoWidth>
     <width>0.4</width>
-    <extrusionMultiplier>1</extrusionMultiplier>
+    <extrusionMultiplier>0.95</extrusionMultiplier>
     <useRetract>1</useRetract>
     <retractionDistance>2</retractionDistance>
     <extraRestartDistance>-0.03</extraRestartDistance>
@@ -58,16 +58,16 @@
   <raftSeparationDistance>0.14</raftSeparationDistance>
   <raftTopInfill>85</raftTopInfill>
   <aboveRaftSpeedMultiplier>0.3</aboveRaftSpeedMultiplier>
-  <useSkirt>1</useSkirt>
+  <useSkirt>0</useSkirt>
   <skirtExtruder>1</skirtExtruder>
   <skirtLayers>2</skirtLayers>
   <skirtOutlines>5</skirtOutlines>
   <skirtOffset>0</skirtOffset>
-  <usePrimePillar>1</usePrimePillar>
+  <usePrimePillar>0</usePrimePillar>
   <primePillarExtruder>999</primePillarExtruder>
   <primePillarWidth>16</primePillarWidth>
   <primePillarLocation>0</primePillarLocation>
-  <primePillarSpeedMultiplier>.3</primePillarSpeedMultiplier>
+  <primePillarSpeedMultiplier>0.3</primePillarSpeedMultiplier>
   <useOozeShield>0</useOozeShield>
   <oozeShieldExtruder>999</oozeShieldExtruder>
   <oozeShieldOffset>3</oozeShieldOffset>
@@ -107,8 +107,8 @@
     <isHeatedBed>0</isHeatedBed>
     <relayBetweenLayers>0</relayBetweenLayers>
     <relayBetweenLoops>0</relayBetweenLoops>
-    <stabilizeAtStartup>0</stabilizeAtStartup>
-    <setpoint layer="1" temperature="220"/>
+    <stabilizeAtStartup>1</stabilizeAtStartup>
+    <setpoint layer="1" temperature="200"/>
   </temperatureController>
   <temperatureController name="Right Extruder (T1)">
     <temperatureNumber>1</temperatureNumber>
@@ -116,7 +116,7 @@
     <relayBetweenLayers>0</relayBetweenLayers>
     <relayBetweenLoops>0</relayBetweenLoops>
     <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="220"/>
+    <setpoint layer="1" temperature="200"/>
   </temperatureController>
   <temperatureController name="Heated Bed">
     <temperatureNumber>2</temperatureNumber>
@@ -170,7 +170,7 @@
   <baudRateOverride>115200</baudRateOverride>
   <overridePrinterModels>1</overridePrinterModels>
   <printerModelsOverride>MakerGear_M3.stl</printerModelsOverride>
-  <startingGcode>;M3 ID Right Extruder Only Startup Script,M605 S0; set to full independ control on x axes,T1 ; Switch to left extruder,G28 ; home all axes,G1 X215 Y40 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z5 ; lift,G1 X40 Y4 F10000; move to unused front edge,G1 Z0.30 F1000,G1 X160 E20 F1000,G1 X170 Z0.05 F1000 ; wipe off tail,G1 Z1,G92 E0,; ok now you can start</startingGcode>
+  <startingGcode>;Both extruders T0/T1  script T0 purges first,T0,M605 S0,G28 ; home all axes,G1 X210 Y40 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z5 ; lift,G1 X170 Y6 F10000; move to unused front edge,G1 Z0.30 F1000,G1 X40 E20 F1000,G1 X30 Z0.05 F1000 ; wipe off tail,G1 Z7,T1 ; Switch to left extruder,G28 X ; home x axes,G1 X215 Y40 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z5 ; lift,G1 X40 Y6 F10000; move to unused front edge,G1 Z0.60 F1000,G1 X160 E20 F1000,G1 X170 Z0.05 F1000 ; wipe off tail,G1 Z7,G28 X ; home x axes,G92 E0,,; ok now you can start</startingGcode>
   <layerChangeGcode></layerChangeGcode>
   <retractionGcode></retractionGcode>
   <toolChangeGcode></toolChangeGcode>
@@ -223,7 +223,7 @@
   <singleExtrusionEndpointExtension>0.2</singleExtrusionEndpointExtension>
   <horizontalSizeCompensation>0</horizontalSizeCompensation>
   <autoConfigureMaterial name="PLA">
-    <globalExtruderTemperature>220</globalExtruderTemperature>
+    <globalExtruderTemperature>200</globalExtruderTemperature>
     <globalBedTemperature>70</globalBedTemperature>
     <globalExtrusionMultiplier>0.95</globalExtrusionMultiplier>
     <fanSpeed>
@@ -255,7 +255,7 @@
       <setpoint layer="1" speed="0"/>
     </fanSpeed>
   </autoConfigureMaterial>
-  <autoConfigureMaterial name="PLA(T0) /PVA(T1)">
+  <autoConfigureMaterial name="PLA(T1) /PVA(T0)">
     <temperatureController name="Left Extruder (T0)">
       <temperatureNumber>0</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
@@ -279,7 +279,7 @@
       <setpoint layer="2" speed="100"/>
     </fanSpeed>
   </autoConfigureMaterial>
-  <autoConfigureMaterial name="PLA(T0) / Polysupport(T1)">
+  <autoConfigureMaterial name="PLA(T1) / Polysupport(T0)">
     <temperatureController name="Left Extruder (T0)">
       <temperatureNumber>0</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
@@ -334,7 +334,7 @@
     <infillExtruder>1</infillExtruder>
     <supportExtruder>1</supportExtruder>
     <useSkirt>1</useSkirt>
-    <usePrimePillar>1</usePrimePillar>
+    <usePrimePillar>0</usePrimePillar>
     <useOozeShield>0</useOozeShield>
     <toggleTemperatureController name="Right Extruder (T1)" status="on" stabilize="on"/>
     <toggleTemperatureController name="Left Extruder (T0)" status="on" stabilize="off"/>
@@ -347,7 +347,7 @@
     <infillExtruder>1</infillExtruder>
     <supportExtruder>1</supportExtruder>
     <useSkirt>0</useSkirt>
-    <usePrimePillar>0</usePrimePillar>
+    <usePrimePillar>1</usePrimePillar>
     <useOozeShield>0</useOozeShield>
     <toggleTemperatureController name="Right Extruder (T1)" status="on" stabilize="on"/>
     <toggleTemperatureController name="Left Extruder (T0)" status="on" stabilize="on"/>
