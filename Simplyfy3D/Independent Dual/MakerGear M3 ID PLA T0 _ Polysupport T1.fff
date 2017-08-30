@@ -18,7 +18,7 @@
     <useCoasting>0</useCoasting>
     <coastingDistance>0.15</coastingDistance>
     <useWipe>0</useWipe>
-    <wipeDistance>5</wipeDistance>
+    <wipeDistance>.25</wipeDistance>
   </extruder>
   <extruder name="Right Extruder (T1)">
     <toolheadNumber>1</toolheadNumber>

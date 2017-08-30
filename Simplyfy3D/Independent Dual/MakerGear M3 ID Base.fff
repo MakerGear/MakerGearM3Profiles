@@ -34,7 +34,7 @@
     <useCoasting>1</useCoasting>
     <coastingDistance>0.03</coastingDistance>
     <useWipe>0</useWipe>
-    <wipeDistance>5</wipeDistance>
+    <wipeDistance>.25</wipeDistance>
   </extruder>
   <primaryExtruder>1</primaryExtruder>
   <layerHeight>0.2</layerHeight>
