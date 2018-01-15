@@ -1,13 +1,13 @@
-Simplyfy 3D Users:
-We will be working on a video and article for dual workflow. We reccomend using the factory files in 	
-	Simplyfy3D- > Independent Dual -> factoryFiles
+Simplify 3D Users:
+We will be working on a video and article for dual workflow. We recommend using the factory files in 	
+	Simplify3D- > Independent Dual -> factoryFiles
 
 
 M3ID 2 Color.factory
 	2 Color/ 2 model prints 
 
 M3ID Duplication.factory
-	Single model prints, once printing with each extruder simultaenously
+	Single model prints, once printing with each extruder simultaneously
 
 M3ID Left Only.factory
 	Left Extruder only
@@ -23,7 +23,7 @@ If you would like to manually import the .fff profiles here are some workflows
 
 For two color prints of the same material
 	-File -> Import FFF Profile 
-		Pick 'MakerGear M3 ID Base.fff', located in Simplyfy3D- > Independent Dual -> MakerGear M3 ID Base.fff
+		Pick 'MakerGear M3 ID Base.fff', located in Simplify3D- > Independent Dual -> MakerGear M3 ID Base.fff
 	-Import both models into S3D
 	-Align both models in your workspace.
 		Typically the easiest way to do this is to select both models and go to
@@ -44,12 +44,12 @@ For two color prints of the same material
 	-Make sure your processes are sliced correctly in the pop-up window that appears, and click 'OK'
 	-Check your G-code preview
 	-Click 'Save Toolpaths to Disk' and save your Gcode to your computer
-	-Upload your Gcode to Your M3ID via Octoprint
+	-Upload your Gcode to Your M3ID via OctoPrint
 	-Print your Gcode
 
 
 Misc Notes
-	-The defualt profiles use both Ooze shield and a prime pillar. For faster prints you may wish to disable one or the other.
+	-The default profiles use both Ooze shield and a prime pillar. For faster prints you may wish to disable one or the other.
 
 
 
@@ -82,7 +82,7 @@ Other Duplication Mode notes
 
 	We recommend that duplication users use a raft to help smooth out any differences in Z-Height.
 
-	Simplyfy3D will only show you a preview of the T0 model in the Gcode preview: you will not see the T0 model.
+	Simplify3D will only show you a preview of the T0 model in the Gcode preview: you will not see the T0 model.
 
 
 
