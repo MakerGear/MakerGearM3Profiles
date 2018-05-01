@@ -1,0 +1,333 @@
+<?xml version="1.0"?>
+<profile name="M3-ID Rev1 PLA" version="1.2" app="S3D-Software 4.0.0">
+  <baseProfile>M3ID R1 Base</baseProfile>
+  <printQuality>Default</printQuality>
+  <printExtruders>Left Extruder (T0)</printExtruders>
+  <extruder name="Left Extruder (T0)">
+    <toolheadNumber>0</toolheadNumber>
+    <diameter>0.35</diameter>
+    <autoWidth>0</autoWidth>
+    <width>0.4</width>
+    <extrusionMultiplier>.95</extrusionMultiplier>
+    <useRetract>1</useRetract>
+    <retractionDistance>2</retractionDistance>
+    <extraRestartDistance>-0.03</extraRestartDistance>
+    <retractionZLift>1</retractionZLift>
+    <retractionSpeed>6000</retractionSpeed>
+    <useCoasting>1</useCoasting>
+    <coastingDistance>0.03</coastingDistance>
+    <useWipe>0</useWipe>
+    <wipeDistance>0.25</wipeDistance>
+  </extruder>
+  <extruder name="Right Extruder (T1)">
+    <toolheadNumber>1</toolheadNumber>
+    <diameter>0.35</diameter>
+    <autoWidth>0</autoWidth>
+    <width>0.4</width>
+    <extrusionMultiplier>.95</extrusionMultiplier>
+    <useRetract>1</useRetract>
+    <retractionDistance>2</retractionDistance>
+    <extraRestartDistance>-0.03</extraRestartDistance>
+    <retractionZLift>1</retractionZLift>
+    <retractionSpeed>6000</retractionSpeed>
+    <useCoasting>1</useCoasting>
+    <coastingDistance>0.03</coastingDistance>
+    <useWipe>0</useWipe>
+    <wipeDistance>0.25</wipeDistance>
+  </extruder>
+  <primaryExtruder>0</primaryExtruder>
+  <layerHeight>0.2</layerHeight>
+  <topSolidLayers>4</topSolidLayers>
+  <bottomSolidLayers>3</bottomSolidLayers>
+  <perimeterOutlines>2</perimeterOutlines>
+  <printPerimetersInsideOut>1</printPerimetersInsideOut>
+  <startPointOption>3</startPointOption>
+  <startPointOriginX>100</startPointOriginX>
+  <startPointOriginY>125</startPointOriginY>
+  <sequentialIslands>0</sequentialIslands>
+  <spiralVaseMode>0</spiralVaseMode>
+  <firstLayerHeightPercentage>70</firstLayerHeightPercentage>
+  <firstLayerWidthPercentage>100</firstLayerWidthPercentage>
+  <firstLayerUnderspeed>0.5</firstLayerUnderspeed>
+  <useRaft>0</useRaft>
+  <raftExtruder>0</raftExtruder>
+  <raftTopLayers>3</raftTopLayers>
+  <raftBaseLayers>2</raftBaseLayers>
+  <raftOffset>3</raftOffset>
+  <raftSeparationDistance>0.16</raftSeparationDistance>
+  <raftTopInfill>87</raftTopInfill>
+  <aboveRaftSpeedMultiplier>0.3</aboveRaftSpeedMultiplier>
+  <useSkirt>1</useSkirt>
+  <skirtExtruder>0</skirtExtruder>
+  <skirtLayers>2</skirtLayers>
+  <skirtOutlines>5</skirtOutlines>
+  <skirtOffset>0</skirtOffset>
+  <usePrimePillar>0</usePrimePillar>
+  <primePillarExtruder>999</primePillarExtruder>
+  <primePillarWidth>16</primePillarWidth>
+  <primePillarLocation>0</primePillarLocation>
+  <primePillarSpeedMultiplier>0.7</primePillarSpeedMultiplier>
+  <useOozeShield>0</useOozeShield>
+  <oozeShieldExtruder>999</oozeShieldExtruder>
+  <oozeShieldOffset>3</oozeShieldOffset>
+  <oozeShieldOutlines>2</oozeShieldOutlines>
+  <oozeShieldSidewallShape>1</oozeShieldSidewallShape>
+  <oozeShieldSidewallAngle>30</oozeShieldSidewallAngle>
+  <oozeShieldSpeedMultiplier>1</oozeShieldSpeedMultiplier>
+  <infillExtruder>0</infillExtruder>
+  <internalInfillPattern>Grid</internalInfillPattern>
+  <externalInfillPattern>Rectilinear</externalInfillPattern>
+  <infillPercentage>25</infillPercentage>
+  <outlineOverlapPercentage>15</outlineOverlapPercentage>
+  <infillExtrusionWidthPercentage>100</infillExtrusionWidthPercentage>
+  <minInfillLength>5</minInfillLength>
+  <infillLayerInterval>1</infillLayerInterval>
+  <internalInfillAngles>45,-45</internalInfillAngles>
+  <overlapInternalInfillAngles>1</overlapInternalInfillAngles>
+  <externalInfillAngles>45,-45</externalInfillAngles>
+  <generateSupport>1</generateSupport>
+  <supportExtruder>0</supportExtruder>
+  <supportInfillPercentage>30</supportInfillPercentage>
+  <supportExtraInflation>0.5</supportExtraInflation>
+  <supportBaseLayers>1</supportBaseLayers>
+  <denseSupportExtruder>0</denseSupportExtruder>
+  <denseSupportLayers>0</denseSupportLayers>
+  <denseSupportInfillPercentage>70</denseSupportInfillPercentage>
+  <supportLayerInterval>1</supportLayerInterval>
+  <supportHorizontalPartOffset>0.3</supportHorizontalPartOffset>
+  <supportUpperSeparationLayers>1</supportUpperSeparationLayers>
+  <supportLowerSeparationLayers>1</supportLowerSeparationLayers>
+  <supportType>0</supportType>
+  <supportGridSpacing>1</supportGridSpacing>
+  <maxOverhangAngle>60</maxOverhangAngle>
+  <supportAngles>90</supportAngles>
+  <temperatureController name="Left Extruder (T0)">
+    <temperatureNumber>0</temperatureNumber>
+    <isHeatedBed>0</isHeatedBed>
+    <relayBetweenLayers>0</relayBetweenLayers>
+    <relayBetweenLoops>0</relayBetweenLoops>
+    <stabilizeAtStartup>1</stabilizeAtStartup>
+    <setpoint layer="1" temperature="200" />
+  </temperatureController>
+  <temperatureController name="Right Extruder (T1)">
+    <temperatureNumber>1</temperatureNumber>
+    <isHeatedBed>0</isHeatedBed>
+    <relayBetweenLayers>0</relayBetweenLayers>
+    <relayBetweenLoops>0</relayBetweenLoops>
+    <stabilizeAtStartup>1</stabilizeAtStartup>
+    <setpoint layer="1" temperature="200" />
+  </temperatureController>
+  <temperatureController name="Heated Bed">
+    <temperatureNumber>2</temperatureNumber>
+    <isHeatedBed>1</isHeatedBed>
+    <relayBetweenLayers>0</relayBetweenLayers>
+    <relayBetweenLoops>0</relayBetweenLoops>
+    <stabilizeAtStartup>1</stabilizeAtStartup>
+    <setpoint layer="1" temperature="65" />
+  </temperatureController>
+  <fanSpeed>
+    <setpoint layer="1" speed="0" />
+    <setpoint layer="1" speed="100" />
+  </fanSpeed>
+  <blipFanToFullPower>0</blipFanToFullPower>
+  <adjustSpeedForCooling>1</adjustSpeedForCooling>
+  <minSpeedLayerTime>5</minSpeedLayerTime>
+  <minCoolingSpeedSlowdown>40</minCoolingSpeedSlowdown>
+  <increaseFanForCooling>0</increaseFanForCooling>
+  <minFanLayerTime>45</minFanLayerTime>
+  <maxCoolingFanSpeed>100</maxCoolingFanSpeed>
+  <increaseFanForBridging>0</increaseFanForBridging>
+  <bridgingFanSpeed>100</bridgingFanSpeed>
+  <use5D>1</use5D>
+  <relativeEdistances>0</relativeEdistances>
+  <allowEaxisZeroing>1</allowEaxisZeroing>
+  <independentExtruderAxes>0</independentExtruderAxes>
+  <includeM10123>0</includeM10123>
+  <stickySupport>1</stickySupport>
+  <applyToolheadOffsets>0</applyToolheadOffsets>
+  <gcodeXoffset>0</gcodeXoffset>
+  <gcodeYoffset>0</gcodeYoffset>
+  <gcodeZoffset>0</gcodeZoffset>
+  <overrideMachineDefinition>1</overrideMachineDefinition>
+  <machineTypeOverride>0</machineTypeOverride>
+  <strokeXoverride>203</strokeXoverride>
+  <strokeYoverride>232</strokeYoverride>
+  <strokeZoverride>205</strokeZoverride>
+  <originOffsetXoverride>0</originOffsetXoverride>
+  <originOffsetYoverride>0</originOffsetYoverride>
+  <originOffsetZoverride>0</originOffsetZoverride>
+  <homeXdirOverride>-1</homeXdirOverride>
+  <homeYdirOverride>-1</homeYdirOverride>
+  <homeZdirOverride>-1</homeZdirOverride>
+  <flipXoverride>1</flipXoverride>
+  <flipYoverride>-1</flipYoverride>
+  <flipZoverride>1</flipZoverride>
+  <toolheadOffsets>0,0|0,0|0,0|0,0|0,0|0,0</toolheadOffsets>
+  <overrideFirmwareConfiguration>1</overrideFirmwareConfiguration>
+  <firmwareTypeOverride>RepRap (Marlin/Repetier/Sprinter)</firmwareTypeOverride>
+  <GPXconfigOverride>r2</GPXconfigOverride>
+  <baudRateOverride>115200</baudRateOverride>
+  <overridePrinterModels>1</overridePrinterModels>
+  <printerModelsOverride>MakerGear_M3.stl</printerModelsOverride>
+  <startingGcode>;M3 ID Left Extruder Only Startup Script,M211 S1 ; turn on soft endstops to protect the machine,M605 S0; set to full independ control on x axes,T0 ; Switch to left extruder,G28 ; home all axes,M211 S0 ; turn off soft endstops for purge moves,G1 X215 Y210 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z10 ; lift,G1 X160 Y240 F10000; move to unused front edge,G1 Z0.30 F1000,G1 X40 E20 F1000,G1 X30 Z0.05 F1000 ; wipe off tail,G1 Z10,G92 E0,M211 S1 ; turn on soft endstops to protect the machine,; ok now you can start</startingGcode>
+  <layerChangeGcode>,</layerChangeGcode>
+  <retractionGcode>,</retractionGcode>
+  <toolChangeGcode>{IF NEWTOOL=0}T1,{IF NEWTOOL=0}G1 X250 F18000 ; park T1,{IF NEWTOOL=0}T0,{IF NEWTOOL=0}G1 X-25 F18000; maker sure t0 is parked,,,{IF NEWTOOL=1}T0,{IF NEWTOOL=1}G1 X-25 F18000; maker sure t0 is parked,{IF NEWTOOL=1}T1,{IF NEWTOOL=1}G1 X250 F18000 ; park T1,,</toolChangeGcode>
+  <endingGcode>M104 S0 ; turn off extruder,M104 S0 T0 ; turn off extruder,M104 S0 T1; turn off extruder,M140 S0 ; turn off bed,M106 S0 ; turn off cooling fan,G91 ; relative mode,G1 Z20 ; move Z down 20mm if possible Max endstop will catch it if it is to far,G90;  absolute mode,G28 X ; home tool/s,G1 Y230 F10000 ; move build plate out,M84 ; disable motors,</endingGcode>
+  <exportFileFormat>gcode</exportFileFormat>
+  <celebration>0</celebration>
+  <celebrationSong>Random Song</celebrationSong>
+  <postProcessing>,</postProcessing>
+  <defaultSpeed>3200</defaultSpeed>
+  <outlineUnderspeed>0.6</outlineUnderspeed>
+  <solidInfillUnderspeed>0.8</solidInfillUnderspeed>
+  <supportUnderspeed>0.8</supportUnderspeed>
+  <rapidXYspeed>5000</rapidXYspeed>
+  <rapidZspeed>1200</rapidZspeed>
+  <minBridgingArea>5</minBridgingArea>
+  <bridgingExtraInflation>0.15</bridgingExtraInflation>
+  <bridgingExtrusionMultiplier>0.9</bridgingExtrusionMultiplier>
+  <bridgingSpeedMultiplier>0.5</bridgingSpeedMultiplier>
+  <useFixedBridgingAngle>0</useFixedBridgingAngle>
+  <fixedBridgingAngle>0</fixedBridgingAngle>
+  <applyBridgingToPerimeters>1</applyBridgingToPerimeters>
+  <filamentDiameters>1.75|1.75|1.75|1.75|1.75|1.75</filamentDiameters>
+  <filamentPricesPerKg>35|35|35|35|35|35</filamentPricesPerKg>
+  <filamentDensities>1.25|1.25|1.25|1.25|1.25|1.25</filamentDensities>
+  <useMinPrintHeight>0</useMinPrintHeight>
+  <minPrintHeight>0</minPrintHeight>
+  <useMaxPrintHeight>0</useMaxPrintHeight>
+  <maxPrintHeight>0</maxPrintHeight>
+  <useDiaphragm>0</useDiaphragm>
+  <diaphragmLayerInterval>20</diaphragmLayerInterval>
+  <robustSlicing>1</robustSlicing>
+  <mergeAllIntoSolid>0</mergeAllIntoSolid>
+  <onlyRetractWhenCrossingOutline>0</onlyRetractWhenCrossingOutline>
+  <retractBetweenLayers>0</retractBetweenLayers>
+  <useRetractionMinTravel>0</useRetractionMinTravel>
+  <retractionMinTravel>3</retractionMinTravel>
+  <retractWhileWiping>1</retractWhileWiping>
+  <onlyWipeOutlines>1</onlyWipeOutlines>
+  <avoidCrossingOutline>1</avoidCrossingOutline>
+  <maxMovementDetourFactor>10</maxMovementDetourFactor>
+  <toolChangeRetractionDistance>25</toolChangeRetractionDistance>
+  <toolChangeExtraRestartDistance>0.35</toolChangeExtraRestartDistance>
+  <toolChangeRetractionSpeed>10000</toolChangeRetractionSpeed>
+  <externalThinWallType>0</externalThinWallType>
+  <internalThinWallType>2</internalThinWallType>
+  <thinWallAllowedOverlapPercentage>25</thinWallAllowedOverlapPercentage>
+  <singleExtrusionMinLength>1</singleExtrusionMinLength>
+  <singleExtrusionMinPrintingWidthPercentage>50</singleExtrusionMinPrintingWidthPercentage>
+  <singleExtrusionMaxPrintingWidthPercentage>200</singleExtrusionMaxPrintingWidthPercentage>
+  <singleExtrusionEndpointExtension>0.2</singleExtrusionEndpointExtension>
+  <horizontalSizeCompensation>0</horizontalSizeCompensation>
+  <autoConfigureExtruders name="Single Mode - Left Extruder(T0)" allowedToolheads="1">
+    <primaryExtruder>0</primaryExtruder>
+    <raftExtruder>0</raftExtruder>
+    <skirtExtruder>0</skirtExtruder>
+    <infillExtruder>0</infillExtruder>
+    <supportExtruder>0</supportExtruder>
+    <denseSupportExtruder>0</denseSupportExtruder>
+    <useSkirt>0</useSkirt>
+    <usePrimePillar>0</usePrimePillar>
+    <useOozeShield>0</useOozeShield>
+    <startingGcode>;M3 ID Left Extruder Only Startup Script,M211 S1 ; turn on soft endstops to protect the machine,M605 S0; set to full independ control on x axes,T0 ; Switch to left extruder,G28 ; home all axes,M211 S0 ; turn off soft endstops for purge moves,G1 X205 Y210 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z10 ; lift,G1 X160 Y240 F10000; move to unused front edge,G1 Z0.30 F1000,G1 X40 E20 F1000,G1 X30 Z0.05 F1000 ; wipe off tail,G1 Z10,G92 E0,M211 S1 ; turn on soft endstops to protect the machine,; ok now you can start</startingGcode>
+    <toggleTemperatureController name="Left Extruder (T0)" status="on" stabilize="on" />
+    <toggleTemperatureController name="Right Extruder (T1)" status="off" stabilize="off" />
+  </autoConfigureExtruders>
+  <autoConfigureExtruders name="Single Mode - Right Extruder (T1)" allowedToolheads="1">
+    <primaryExtruder>1</primaryExtruder>
+    <raftExtruder>1</raftExtruder>
+    <skirtExtruder>1</skirtExtruder>
+    <infillExtruder>1</infillExtruder>
+    <supportExtruder>1</supportExtruder>
+    <denseSupportExtruder>1</denseSupportExtruder>
+    <useSkirt>1</useSkirt>
+    <usePrimePillar>0</usePrimePillar>
+    <useOozeShield>0</useOozeShield>
+    <startingGcode>;M3 ID Right Extruder Only Startup Script,M211 S1 ; turn on soft endstops to protect the machine,M605 S0; set to full independ control on x axes,T0; switch to right extruder,G28 ; home all axes and probe,M211 S0 ; turn off soft endstops for purge moves,G1 X25 F9000; move T0 past bedclips as to not damage probe,T1 ; Switch to left extruder,G1 X205 Y210 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z10 ; lift,G1 X100 Y240 F10000; move to unused front edge,G1 Z0.30 F1000,G1 X180 E9.25  F1000; deposit extrusion line,G1 Y239  E9.45 F1000 ; move  and extrude y,G1 X130 E17.05; lift F1000; deposit extrusion line,G1 X120 Z0.05 F1000 ; wipe off tail,G92 E0; zero extruder,G1 Z10 Y230 ; move back to safe bounds,M211 S1 ; turn on soft endstops ,T0,G1 X-25 ; move T0 back home,T1,,; ok now you can start;</startingGcode>
+    <toggleTemperatureController name="Left Extruder (T0)" status="off" stabilize="off" />
+    <toggleTemperatureController name="Right Extruder (T1)" status="on" stabilize="on" />
+  </autoConfigureExtruders>
+  <autoConfigureExtruders name="Dual Mode - Left Extruder (T0)" allowedToolheads="2">
+    <primaryExtruder>0</primaryExtruder>
+    <raftExtruder>0</raftExtruder>
+    <skirtExtruder>0</skirtExtruder>
+    <infillExtruder>0</infillExtruder>
+    <supportExtruder>0</supportExtruder>
+    <denseSupportExtruder>0</denseSupportExtruder>
+    <useSkirt>1</useSkirt>
+    <usePrimePillar>1</usePrimePillar>
+    <useOozeShield>1</useOozeShield>
+    <startingGcode>;Both ExtrudersM3 ID T0/T1 starting script T1 purges first T0 purges second,T0;,M211 S1 ; turn on soft endstops to protect the machine,M605 S0,G28 ; home all axes,;,;,G1 X25 F9000; move T0 past bedclips as to not damage probe,;,;,T1 ; Switch to left extruder,G1 X215 Y210 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z10 ; lift,M211 S0 ; turn off soft endstops for purge moves,G1 X100 Y240 F10000; move to unused back edge,G1 Z0.30 F1000,G1 X180 E9.25  F1000; deposit extrusion line,G1 Y239  E9.45 F1000 ; move  and extrude y,G1 X130 E17.05; lift F1000; deposit extrusion line,G1 X100 Z0.05 F1000 ; wipe off tail,G92 E0; zero extruder,G1 Z10 Y225 ; move back to safe bounds,G1 X252 F4800; move T1 home,;,T0;,G1 X205 Y210 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z10 ; lift,G1 X100 Y240 F10000; move to unused back edge,G1 Z0.30 F1000,G1 X20 E9.25  F1000; deposit extrusion line,G1 Y239  E9.45 F1000 ; move  and extrude y,G1 X70 E17.05; lift F1000; deposit extrusion line,G1 X100 Z0.05 F1000 ; wipe off tail,G92 E0; zero extruder,G1 Z10 Y225 ; move back to safe bounds,M211 S1 ; turn on soft endstops ,G92 E0,; ok now you can start,</startingGcode>
+    <toggleTemperatureController name="Right Extruder (T1)" status="on" stabilize="on" />
+    <toggleTemperatureController name="Left Extruder (T0)" status="on" stabilize="on" />
+  </autoConfigureExtruders>
+  <autoConfigureExtruders name="Dual Mode - Right Extruder (T1)" allowedToolheads="2">
+    <primaryExtruder>1</primaryExtruder>
+    <raftExtruder>1</raftExtruder>
+    <skirtExtruder>1</skirtExtruder>
+    <infillExtruder>1</infillExtruder>
+    <supportExtruder>1</supportExtruder>
+    <denseSupportExtruder>1</denseSupportExtruder>
+    <useSkirt>1</useSkirt>
+    <usePrimePillar>1</usePrimePillar>
+    <useOozeShield>1</useOozeShield>
+    <startingGcode>;Both Extruders M3 ID T0/T1 starting script T0 purges first T1 purges second,T0;,M211 S1 ; turn on soft endstops to protect the machine,M605 S0,G28 ; home all axes,;,;,T0;,G1 X205 Y210 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z10 ; lift,M211 S0 ; turn off soft endstops for purge moves,G1 X100 Y240 F10000; move to unused back edge,G1 Z0.30 F1000,G1 X20 E9.25  F1000; deposit extrusion line,G1 Y239  E9.45 F1000 ; move  and extrude y,G1 X70 E17.05; lift F1000; deposit extrusion line,G1 X100 Z0.05 F1000 ; wipe off tail,G1 X25 F9000; move T0 past bedclips as to not damage probe,G92 E0; zero extruder,;,;,T1 ; Switch to left extruder,G1 X215 Y210 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z10 ; lift,G1 X100 Y240 F10000; move to unused back edge,G1 Z0.30 F1000,G1 X180 E9.25  F1000; deposit extrusion line,G1 Y239  E9.45 F1000 ; move  and extrude y,G1 X130 E17.05; lift F1000; deposit extrusion line,G1 X100 Z0.05 F1000 ; wipe off tail,G92 E0; zero extruder,G1 Z10 Y225 ; move back to safe bounds,M211 S1 ; turn on soft endstops ,T0 ; need to home T0,G1 X-25 F4800; move T0 home,T1 ; back to T1,; ok now you can start,
+
+</startingGcode>
+    <toggleTemperatureController name="Left Extruder (T0)" status="on" stabilize="on" />
+    <toggleTemperatureController name="Right Extruder (T1)" status="on" stabilize="on" />
+  </autoConfigureExtruders>
+  <autoConfigureExtruders name="Both Extruders for Dual Wizard" allowedToolheads="2">
+    <primaryExtruder>0</primaryExtruder>
+    <raftExtruder>0</raftExtruder>
+    <skirtExtruder>0</skirtExtruder>
+    <infillExtruder>0</infillExtruder>
+    <supportExtruder>0</supportExtruder>
+    <denseSupportExtruder>0</denseSupportExtruder>
+    <useSkirt>1</useSkirt>
+    <usePrimePillar>1</usePrimePillar>
+    <useOozeShield>1</useOozeShield>
+    <startingGcode>;Both ExtrudersM3 ID T0/T1 starting script T1 purges first T0 purges second,T0;,M211 S1 ; turn on soft endstops to protect the machine,M605 S0,G28 ; home all axes,;,;,G1 X25 F9000; move T0 past bedclips as to not damage probe,;,;,T1 ; Switch to left extruder,G1 X215 Y210 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z10 ; lift,M211 S0 ; turn off soft endstops for purge moves,G1 X100 Y240 F10000; move to unused back edge,G1 Z0.30 F1000,G1 X180 E9.25  F1000; deposit extrusion line,G1 Y239  E9.45 F1000 ; move  and extrude y,G1 X130 E17.05; lift F1000; deposit extrusion line,G1 X100 Z0.05 F1000 ; wipe off tail,G92 E0; zero extruder,G1 Z10 Y225 ; move back to safe bounds,G1 X252 F4800; move T1 home,;,T0;,G1 X205 Y210 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z10 ; lift,G1 X100 Y240 F10000; move to unused back edge,G1 Z0.30 F1000,G1 X20 E9.25  F1000; deposit extrusion line,G1 Y239  E9.45 F1000 ; move  and extrude y,G1 X70 E17.05; lift F1000; deposit extrusion line,G1 X100 Z0.05 F1000 ; wipe off tail,G92 E0; zero extruder,G1 Z10 Y225 ; move back to safe bounds,M211 S1 ; turn on soft endstops ,G92 E0,; ok now you can start,</startingGcode>
+    <toggleTemperatureController name="Left Extruder (T0)" status="on" stabilize="on" />
+    <toggleTemperatureController name="Right Extruder (T1)" status="on" stabilize="on" />
+  </autoConfigureExtruders>
+  <autoConfigureQuality name="Default">
+    <layerHeight>0.2</layerHeight>
+    <topSolidLayers>3</topSolidLayers>
+    <bottomSolidLayers>3</bottomSolidLayers>
+    <skirtLayers>2</skirtLayers>
+    <infillPercentage>25</infillPercentage>
+    <supportInfillPercentage>30</supportInfillPercentage>
+    <defaultSpeed>3200</defaultSpeed>
+    <useRaft>0</useRaft>
+    <internalInfillPattern>Rectilinear</internalInfillPattern>
+    <rapidXYspeed>5000</rapidXYspeed>
+  </autoConfigureQuality>
+  <autoConfigureQuality name="Fast">
+    <layerHeight>0.3</layerHeight>
+    <topSolidLayers>3</topSolidLayers>
+    <bottomSolidLayers>3</bottomSolidLayers>
+    <skirtLayers>1</skirtLayers>
+    <infillPercentage>15</infillPercentage>
+    <supportInfillPercentage>25</supportInfillPercentage>
+    <defaultSpeed>3800</defaultSpeed>
+    <useRaft>0</useRaft>
+    <internalInfillPattern>Rectilinear</internalInfillPattern>
+    <rapidXYspeed>18000</rapidXYspeed>
+  </autoConfigureQuality>
+  <autoConfigureQuality name="Fine">
+    <layerHeight>0.1</layerHeight>
+    <topSolidLayers>8</topSolidLayers>
+    <bottomSolidLayers>6</bottomSolidLayers>
+    <skirtLayers>2</skirtLayers>
+    <infillPercentage>35</infillPercentage>
+    <supportInfillPercentage>40</supportInfillPercentage>
+    <defaultSpeed>3000</defaultSpeed>
+    <useRaft>0</useRaft>
+    <internalInfillPattern>Rectilinear</internalInfillPattern>
+    <rapidXYspeed>4000</rapidXYspeed>
+  </autoConfigureQuality>
+</profile>
+
