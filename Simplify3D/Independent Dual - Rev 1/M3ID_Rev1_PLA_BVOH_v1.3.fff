@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="M3-ID Rev1 PLA-BVOH" version="1.2" app="S3D-Software 4.0.0">
+<profile name="M3-ID Rev1 PLA-BVOH" version="1.3" app="S3D-Software 4.0.0">
   <baseProfile>M3ID R1 Base</baseProfile>
   <printQuality>Default</printQuality>
   <printExtruders>Left Extruder (T0)</printExtruders>
@@ -174,11 +174,11 @@
   <baudRateOverride>115200</baudRateOverride>
   <overridePrinterModels>1</overridePrinterModels>
   <printerModelsOverride>MakerGear_M3.stl</printerModelsOverride>
-  <startingGcode>;M3 ID Left Extruder Only Startup Script,M211 S1 ; turn on soft endstops to protect the machine,M605 S0; set to full independ control on x axes,T0 ; Switch to left extruder,G28 ; home all axes,M211 S0 ; turn off soft endstops for purge moves,G1 X215 Y210 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z10 ; lift,G1 X160 Y240 F10000; move to unused front edge,G1 Z0.30 F1000,G1 X40 E20 F1000,G1 X30 Z0.05 F1000 ; wipe off tail,G1 Z10,G92 E0,M211 S1 ; turn on soft endstops to protect the machine,; ok now you can start</startingGcode>
+  <startingGcode>;Both ExtrudersM3 ID T0/T1 starting script T1 purges first T0 purges second,T0;,M211 S1 ; turn on soft endstops to protect the machine,M605 S0,G28 ; home all axes,;,;,G1 X25 F9000; move T0 past bedclips as to not damage probe,;,;,T1 ; Switch to left extruder,G1 X215 Y210 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z10 ; lift,M211 S0 ; turn off soft endstops for purge moves,G1 X100 Y240 F10000; move to unused back edge,G1 Z0.30 F1000,G1 X180 E9.25  F1000; deposit extrusion line,G1 Y239  E9.45 F1000 ; move  and extrude y,G1 X130 E17.05; lift F1000; deposit extrusion line,G1 X100 Z0.05 F1000 ; wipe off tail,G92 E0; zero extruder,G1 Z10 Y225 ; move back to safe bounds,G1 X252 F4800; move T1 home,;,T0;,G1 X205 Y210 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z10 ; lift,G1 X100 Y240 F10000; move to unused back edge,G1 Z0.30 F1000,G1 X20 E9.25  F1000; deposit extrusion line,G1 Y239  E9.45 F1000 ; move  and extrude y,G1 X70 E17.05; lift F1000; deposit extrusion line,G1 X100 Z0.05 F1000 ; wipe off tail,G92 E0; zero extruder,G1 Z10 Y225 ; move back to safe bounds,M211 S1 ; turn on soft endstops ,G92 E0,; ok now you can start,</startingGcode>
   <layerChangeGcode>,</layerChangeGcode>
   <retractionGcode>,</retractionGcode>
   <toolChangeGcode>{IF NEWTOOL=0}T1,{IF NEWTOOL=0}G1 X250 F18000 ; park T1,{IF NEWTOOL=0}T0,{IF NEWTOOL=0}G1 X-25 F18000; maker sure t0 is parked,,,{IF NEWTOOL=1}T0,{IF NEWTOOL=1}G1 X-25 F18000; maker sure t0 is parked,{IF NEWTOOL=1}T1,{IF NEWTOOL=1}G1 X250 F18000 ; park T1,,</toolChangeGcode>
-  <endingGcode>T1 ;,;retract BVOH,G91 ;,G1 E-100 F400 ;,G90 ;,G92 E0 ;,T0 ;,M104 S0 ; turn off extruder,M104 S0 T0 ; turn off extruder,M104 S0 T1; turn off extruder,M140 S0 ; turn off bed,M106 S0 ; turn off cooling fan,G91 ; relative mode,G1 Z20 ; move Z down 20mm if possible Max endstop will catch it if it is to far,G90;  absolute mode,G28 X ; home tool/s,G1 Y230 F10000 ; move build plate out,M84 ; disable motors,</endingGcode>
+  <endingGcode>T1 ;,;retract BVOH,G91 ;,G90 ;,G92 E0 ;,T0 ;,M104 S0 ; turn off extruder,M104 S0 T0 ; turn off extruder,M104 S0 T1; turn off extruder,M140 S0 ; turn off bed,M106 S0 ; turn off cooling fan,G91 ; relative mode,G1 Z20 ; move Z down 20mm if possible Max endstop will catch it if it is to far,G90;  absolute mode,G28 X ; home tool/s,G1 Y230 F10000 ; move build plate out,M84 ; disable motors,</endingGcode>
   <exportFileFormat>gcode</exportFileFormat>
   <celebration>0</celebration>
   <celebrationSong>Random Song</celebrationSong>
@@ -262,7 +262,7 @@
     <internalInfillPattern>Rectilinear</internalInfillPattern>
     <rapidXYspeed>4000</rapidXYspeed>
   </autoConfigureQuality>
-  <autoConfigureQuality name="Less BVOH">
+  <autoConfigureQuality name="Economy Supports">
     <layerHeight>0.2</layerHeight>
     <supportExtruder>0</supportExtruder>
   </autoConfigureQuality>
