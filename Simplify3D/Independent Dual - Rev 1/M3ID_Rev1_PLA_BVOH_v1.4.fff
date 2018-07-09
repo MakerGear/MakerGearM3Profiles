@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<profile name="M3-ID Rev1 PLA-BVOH" version="1.3" app="S3D-Software 4.0.0">
+<profile name="M3-ID Rev1 PLA-BVOH" version="1.4" app="S3D-Software 4.0.0">
   <baseProfile>M3ID R1 Base</baseProfile>
   <printQuality>Default</printQuality>
   <printExtruders>Left Extruder (T0)</printExtruders>
@@ -101,35 +101,6 @@
   <supportGridSpacing>1</supportGridSpacing>
   <maxOverhangAngle>45</maxOverhangAngle>
   <supportAngles>45</supportAngles>
-  <temperatureController name="Left Extruder (T0)">
-    <temperatureNumber>0</temperatureNumber>
-    <isHeatedBed>0</isHeatedBed>
-    <relayBetweenLayers>0</relayBetweenLayers>
-    <relayBetweenLoops>0</relayBetweenLoops>
-    <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="215" />
-  </temperatureController>
-  <temperatureController name="Right Extruder (T1)">
-    <temperatureNumber>1</temperatureNumber>
-    <isHeatedBed>0</isHeatedBed>
-    <relayBetweenLayers>0</relayBetweenLayers>
-    <relayBetweenLoops>0</relayBetweenLoops>
-    <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="225" />
-  </temperatureController>
-  <temperatureController name="Heated Bed">
-    <temperatureNumber>2</temperatureNumber>
-    <isHeatedBed>1</isHeatedBed>
-    <relayBetweenLayers>0</relayBetweenLayers>
-    <relayBetweenLoops>0</relayBetweenLoops>
-    <stabilizeAtStartup>1</stabilizeAtStartup>
-    <setpoint layer="1" temperature="70" />
-    <setpoint layer="2" temperature="68" />
-    <setpoint layer="3" temperature="66" />
-    <setpoint layer="4" temperature="64" />
-    <setpoint layer="5" temperature="62" />
-    <setpoint layer="6" temperature="60" />
-  </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0" />
     <setpoint layer="2" speed="100" />
@@ -266,5 +237,35 @@
     <layerHeight>0.2</layerHeight>
     <supportExtruder>0</supportExtruder>
   </autoConfigureQuality>
+  <autoConfigureMaterial name="PLA with BVOH Support">
+    <temperatureController name="Left Extruder (T0)">
+      <temperatureNumber>0</temperatureNumber>
+      <isHeatedBed>0</isHeatedBed>
+      <relayBetweenLayers>0</relayBetweenLayers>
+      <relayBetweenLoops>0</relayBetweenLoops>
+      <stabilizeAtStartup>1</stabilizeAtStartup>
+      <setpoint layer="1" temperature="215" />
+    </temperatureController>
+    <temperatureController name="Right Extruder (T1)">
+      <temperatureNumber>1</temperatureNumber>
+      <isHeatedBed>0</isHeatedBed>
+      <relayBetweenLayers>0</relayBetweenLayers>
+      <relayBetweenLoops>0</relayBetweenLoops>
+      <stabilizeAtStartup>1</stabilizeAtStartup>
+      <setpoint layer="1" temperature="225" />
+    </temperatureController>
+    <temperatureController name="Heated Bed">
+      <temperatureNumber>2</temperatureNumber>
+      <isHeatedBed>1</isHeatedBed>
+      <relayBetweenLayers>0</relayBetweenLayers>
+      <relayBetweenLoops>0</relayBetweenLoops>
+      <stabilizeAtStartup>1</stabilizeAtStartup>
+      <setpoint layer="1" temperature="70" />
+      <setpoint layer="2" temperature="68" />
+      <setpoint layer="3" temperature="66" />
+      <setpoint layer="4" temperature="64" />
+      <setpoint layer="5" temperature="62" />
+      <setpoint layer="6" temperature="60" />
+    </temperatureController>
+  </autoConfigureMaterial>
 </profile>
-
