@@ -101,6 +101,30 @@
   <supportGridSpacing>1</supportGridSpacing>
   <maxOverhangAngle>60</maxOverhangAngle>
   <supportAngles>90</supportAngles>
+  <temperatureController name="Left Extruder (T0)">
+    <temperatureNumber>0</temperatureNumber>
+    <isHeatedBed>0</isHeatedBed>
+    <relayBetweenLayers>0</relayBetweenLayers>
+    <relayBetweenLoops>0</relayBetweenLoops>
+    <stabilizeAtStartup>1</stabilizeAtStartup>
+    <setpoint layer="1" temperature="200" />
+  </temperatureController>
+  <temperatureController name="Right Extruder (T1)">
+    <temperatureNumber>1</temperatureNumber>
+    <isHeatedBed>0</isHeatedBed>
+    <relayBetweenLayers>0</relayBetweenLayers>
+    <relayBetweenLoops>0</relayBetweenLoops>
+    <stabilizeAtStartup>1</stabilizeAtStartup>
+    <setpoint layer="1" temperature="200" />
+  </temperatureController>
+  <temperatureController name="Heated Bed">
+    <temperatureNumber>2</temperatureNumber>
+    <isHeatedBed>1</isHeatedBed>
+    <relayBetweenLayers>0</relayBetweenLayers>
+    <relayBetweenLoops>0</relayBetweenLoops>
+    <stabilizeAtStartup>1</stabilizeAtStartup>
+    <setpoint layer="1" temperature="65" />
+  </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0" />
     <setpoint layer="2" speed="100" />
@@ -262,3 +286,4 @@ M211 S1 ; turn on soft endstops  ,G92 E0; zero extruder,,;M605 S2 ;,;G28 X ;</st
     </temperatureController>
   </autoConfigureMaterial>
 </profile>
+

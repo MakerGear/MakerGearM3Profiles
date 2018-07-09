@@ -102,6 +102,30 @@
   <supportGridSpacing>1</supportGridSpacing>
   <maxOverhangAngle>60</maxOverhangAngle>
   <supportAngles>90</supportAngles>
+  <temperatureController name="Left Extruder (T0)">
+    <temperatureNumber>0</temperatureNumber>
+    <isHeatedBed>0</isHeatedBed>
+    <relayBetweenLayers>0</relayBetweenLayers>
+    <relayBetweenLoops>0</relayBetweenLoops>
+    <stabilizeAtStartup>1</stabilizeAtStartup>
+    <setpoint layer="1" temperature="265" />
+  </temperatureController>
+  <temperatureController name="Right Extruder (T1)">
+    <temperatureNumber>1</temperatureNumber>
+    <isHeatedBed>0</isHeatedBed>
+    <relayBetweenLayers>0</relayBetweenLayers>
+    <relayBetweenLoops>0</relayBetweenLoops>
+    <stabilizeAtStartup>1</stabilizeAtStartup>
+    <setpoint layer="1" temperature="0" />
+  </temperatureController>
+  <temperatureController name="Heated Bed">
+    <temperatureNumber>2</temperatureNumber>
+    <isHeatedBed>1</isHeatedBed>
+    <relayBetweenLayers>0</relayBetweenLayers>
+    <relayBetweenLoops>0</relayBetweenLoops>
+    <stabilizeAtStartup>1</stabilizeAtStartup>
+    <setpoint layer="1" temperature="110" />
+  </temperatureController>
   <fanSpeed>
     <setpoint layer="1" speed="0" />
   </fanSpeed>
@@ -250,7 +274,6 @@
     <usePrimePillar>1</usePrimePillar>
     <useOozeShield>1</useOozeShield>
     <startingGcode>;Both Extruders M3 ID T0/T1 starting script T0 purges first T1 purges second,T0;,M211 S1 ; turn on soft endstops to protect the machine,M605 S0,G28 ; home all axes,;,;,T0;,G1 X205 Y210 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z10 ; lift,M211 S0 ; turn off soft endstops for purge moves,G1 X100 Y240 F10000; move to unused back edge,G1 Z0.30 F1000,G1 X20 E9.25  F1000; deposit extrusion line,G1 Y239  E9.45 F1000 ; move  and extrude y,G1 X70 E17.05; lift F1000; deposit extrusion line,G1 X100 Z0.05 F1000 ; wipe off tail,G1 X25 F9000; move T0 past bedclips as to not damage probe,G92 E0; zero extruder,;,;,T1 ; Switch to left extruder,G1 X215 Y210 Z0.1 F10000 ; move off the bed and bring the bed up,G92 E0 ; zero extruder,G1 X195 Z0.1 F1000; scrape off any ooze,G1 Z10 ; lift,G1 X100 Y240 F10000; move to unused back edge,G1 Z0.30 F1000,G1 X180 E9.25  F1000; deposit extrusion line,G1 Y239  E9.45 F1000 ; move  and extrude y,G1 X130 E17.05; lift F1000; deposit extrusion line,G1 X100 Z0.05 F1000 ; wipe off tail,G92 E0; zero extruder,G1 Z10 Y225 ; move back to safe bounds,M211 S1 ; turn on soft endstops ,T0 ; need to home T0,G1 X-25 F4800; move T0 home,T1 ; back to T1,; ok now you can start,
-
 </startingGcode>
     <toggleTemperatureController name="Left Extruder (T0)" status="on" stabilize="on" />
     <toggleTemperatureController name="Right Extruder (T1)" status="on" stabilize="on" />
@@ -306,6 +329,10 @@
     <rapidXYspeed>4000</rapidXYspeed>
   </autoConfigureQuality>
   <autoConfigureMaterial name="ABS">
+
+    <globalExtruderTemperature>265</globalExtruderTemperature>
+    <globalBedTemperature>110</globalBedTemperature>
+
     <temperatureController name="Left Extruder (T0)">
       <temperatureNumber>0</temperatureNumber>
       <isHeatedBed>0</isHeatedBed>
@@ -320,7 +347,7 @@
       <relayBetweenLayers>0</relayBetweenLayers>
       <relayBetweenLoops>0</relayBetweenLoops>
       <stabilizeAtStartup>1</stabilizeAtStartup>
-      <setpoint layer="1" temperature="265" />
+      <setpoint layer="1" temperature="0" />
     </temperatureController>
     <temperatureController name="Heated Bed">
       <temperatureNumber>2</temperatureNumber>
@@ -332,3 +359,4 @@
     </temperatureController>
   </autoConfigureMaterial>
 </profile>
+
