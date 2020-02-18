@@ -1,0 +1,2 @@
+## Experimental M3 Profiles
+For more information on printing with the DuPont Surlyn and Hytrel 3D4000FL and 3D41000FL are flexible to semi-flexible materials. We have Simplify3D profiles for these materials here. DuPont has more information, and Printing Guidelines, for these materials [here](http://www.3dprintingsolutions.dupont.com/).
