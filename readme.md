@@ -13,6 +13,12 @@ View the installation video on [MakerGear M3 Profile Installation Video on YouTu
 | M3ID Left Only.factory | Use only the Left Extruder - Tool 0 (T0) |
 | M3ID Right Only.factory | User only the Right Extruder - Tool 1 (T1) |
 
+### Pick the Correct Profile for Your Printer Model and Revision
+| M3 Model | M3 Revision | Profile Folder |
+| ----------- | ----------- | ----------- |
+| M3-SE | Rev-0 (No Probe) | Simplify3D / Single Extruder |
+| M3-ID | Rev-0 (No Probe) | Simplify3D / Independent Dual - Rev 0 |
+| M3-ID | Rev-1 (Probe) | Simplify3D / Independent Dual - Rev 1 |
 
 ### Two-Color Printing Instructions (Same Material Type)
 1. Manually import the FFF profiles into Simplify3D (if you have not already done so):
@@ -63,5 +69,7 @@ In order to correctly use duplication mode, your two hot-ends must have the corr
 * We recommend using a raft to help smooth out any differences in Z-Height.
 * Simplify3D will only show you a preview of the T0 model in the Gcode preview - you will not see the T0 model.
 
+### Updated Starting Scripts
+The latest version of our M3 profiles, for PLA and ABS, have updated starting scripts. When a print is started, the bed will heat and the probe will check the bed before the hotends start to heat up. This will keep the nozzle from inadvertently depositing filament on the build surface prior to the print starting.
 
 
